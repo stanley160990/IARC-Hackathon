@@ -39,10 +39,10 @@ nvidia-smi mig -i 7 -cgi 19,19,19,19,19,19,19 -C
 
 ```
 mkdir bootcamp-nvidia
-git clone https://github.com/stanley160990/epsindo-hackathon.git .
+https://github.com/stanley160990/IARC-Hackathon .
 
-#bootcampepsindo:0.1 merupakan nama image yang dihasilkan oleh proses build
-docker build . -t bootcampepsindo:0.1
+#bootcampiarc:0.1 merupakan nama image yang dihasilkan oleh proses build
+docker build . -t bootcampiarc:0.1
 ```
 ### Run Bootcamp Container
 ```
@@ -63,6 +63,6 @@ Copy the Access URL to share with participants
 ## Credit
 
 * Python AI Material from https://github.com/openhackathons-org/gpubootcamp
-* Python AI Material in Bahasa Indonesia Translate by Gunadarma Artificial Intelegence Center of Excelence
+* Python AI Material in Bahasa Indonesia Translate by Gunadarma Artificial Intelegence Center of Excelence (https://ai-coe.gunadarma.ac.id/)
 * Dockerfile From https://github.com/openhackathons-org/gpubootcamp
 * MIG Configuration from NVIDIA DGX A100 Documentation
