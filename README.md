@@ -31,6 +31,9 @@ nvidia-smi mig -i 4 -cgi 19,19,19,19,19,19,19 -C
 nvidia-smi mig -i 5 -cgi 19,19,19,19,19,19,19 -C
 nvidia-smi mig -i 7 -cgi 19,19,19,19,19,19,19 -C
 
+systemctl start nvsm
+systemctl start nvidia-dcgm
+
 ```
 
 ## Running Bootcamp Environment
