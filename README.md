@@ -60,7 +60,7 @@ Copy the Access URL to share with participants
 ./remove.sh <kode_hari> <id_gpu>
 ```
 
-# Credit
+## Credit
 
 * Python AI Material from https://github.com/openhackathons-org/gpubootcamp
 * Python AI Material in Bahasa Indonesia Translate by Gunadarma Artificial Intelegence Center of Excelence
