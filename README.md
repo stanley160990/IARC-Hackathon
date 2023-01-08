@@ -31,6 +31,9 @@ nvidia-smi mig -i 4 -cgi 19,19,19,19,19,19,19 -C
 nvidia-smi mig -i 5 -cgi 19,19,19,19,19,19,19 -C
 nvidia-smi mig -i 7 -cgi 19,19,19,19,19,19,19 -C
 
+systemctl start nvsm
+systemctl start nvidia-dcgm
+
 ```
 
 ## Running Bootcamp Environment
@@ -66,3 +69,7 @@ Copy the Access URL to share with participants
 * Python AI Material in Bahasa Indonesia Translate by Gunadarma Artificial Intelegence Center of Excelence (https://ai-coe.gunadarma.ac.id/)
 * Dockerfile From https://github.com/openhackathons-org/gpubootcamp
 * MIG Configuration from NVIDIA DGX A100 Documentation
+
+## License
+GPL V3
+https://www.gnu.org/licenses/gpl-3.0.en.html
