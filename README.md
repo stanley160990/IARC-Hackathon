@@ -3,15 +3,15 @@
 ## prerequisite
 
 ### Config NVDIA MIG
-Pada kebutuhan Bootcamp ini setiap peserta akan mendapatkan satu mig sebesar 5GB, sehingga perlu di konfigurasi MIG.
+In this Bootcamp, each participant will get one mig of 5GB, so it needs to be configured in MIG.
 
-Untuk melakukan enable mig pada A100
+To perform enable mig on the A100
 
 ```
 systemctl stop nvsm
 systemctl stop nvidia-dcgm
 
-# nilai 0 sampai 1 merupakan ID GPU
+# values 0 to 7 (8 Cores) represent the GPU ID
 
 nvidia-smi -i 0 -mig 1
 nvidia-smi -i 1 -mig 1
@@ -22,7 +22,7 @@ nvidia-smi -i 5 -mig 1
 nvidia-smi -i 6 -mig 1
 nvidia-smi -i 7 -mig 1
 
-# nilai 0 sampai 1 merupakan ID dari GPU, 19 adalah ID untuk MIG 5G, jadi setiap Core GPU akan dibagi menjadi 7
+#value 0 to 7 (8 Cores) is the ID of the GPU, 19 is the ID for MIG 5G, so each GPU Core will be divided into 7
 nvidia-smi mig -i 0 -cgi 19,19,19,19,19,19,19 -C
 nvidia-smi mig -i 1 -cgi 19,19,19,19,19,19,19 -C
 nvidia-smi mig -i 2 -cgi 19,19,19,19,19,19,19 -C
@@ -48,6 +48,9 @@ docker build . -t bootcampepsindo:0.1
 ```
 ./run.sh <kode_hari> <id_gpu> <nama_image>
 ```
+
+Copy the Access URL to share with participants
+
 ### stop Bootcamp Container
 ```
 ./stop.sh <kode_hari> <id_gpu>
@@ -56,3 +59,10 @@ docker build . -t bootcampepsindo:0.1
 ```
 ./remove.sh <kode_hari> <id_gpu>
 ```
+
+# Credit
+
+* Python AI Material from https://github.com/openhackathons-org/gpubootcamp
+* Python AI Material in Bahasa Indonesia Translate by Gunadarma Artificial Intelegence Center of Excelence
+* Dockerfile From https://github.com/openhackathons-org/gpubootcamp
+* MIG Configuration from NVIDIA DGX A100 Documentation
